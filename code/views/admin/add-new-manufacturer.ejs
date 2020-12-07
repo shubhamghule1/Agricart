@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Add New Manufacturer</title>
+
+  <% include ../partials/header %>
+  <% include ../partials/admin-sidebar %>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Welcome!</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Add New Manufacturer</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form method="post">
+              <div class="box-body">
+                <div class="form-group">
+                  <label>Manufacturer Name</label>
+                  <input type="text" class="form-control" id="" placeholder="Manufacturer name" name="man_name" required >
+                </div>
+                <div class="form-group">
+                  <label>Manufacturer License</label>
+                  <input type="text" class="form-control" id="" placeholder="Manufacturer license" name="man_license" required>
+                </div> 
+                <div class="form-group">
+                  <label>Manufacturer Address</label>
+                  <textarea class="form-control" rows="3" id="" placeholder="Manufacturer address" name="man_address" required></textarea>
+                  
+                </div>
+                 
+                
+              </div>
+              <!-- /.box-body -->
+
+            <div class="box-footer">
+
+              <div class="error">
+                  <% if(message != null){ %>
+                  <p><span id="error"><div class="alert alert-info"><%= message %></div></span></p>
+                  <% } %>
+              </div>       
+                <button type="submit" class="btn btn-primary">ADD</button>
+            </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+</body>
+</html

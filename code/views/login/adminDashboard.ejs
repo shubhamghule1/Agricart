@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="assets/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/Admin/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="assets/Admin/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/Admin/dist/css/AdminLTE.min.css">
+
+  <link rel="stylesheet" href="assets/Admin/dist/css/skins/skin-blue.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/dashboard-style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="assets/css/dashboard-style.css"> -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+
+<% include ../partials/admin-sidebar.ejs %>
+
+
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="/adminDashboard" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>E-Agriculture</b>Shop</span>
+      
+      <span class="logo-lg"><b>E-Agriculture</b>Shop</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="assets/Admin/dist/img/avatar5.png" class="img-circle" alt="User Image">
+
+                <p>
+                  
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="/profile" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- sub navbar -->
+  <% include ../partials/sub-navbar.ejs %>  
+
+<!-- Sidebar-->
+
+<!-- Sidebar -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Welcome!</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+
+
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <a href="/addnewmedicine">
+            <div class="small-box bg-aqua">
+              <div class="card">
+                <img src="assets/images/dashboard/undraw_agree_8pb9.svg" alt="Avatar" style="width:100%; height:300px;">
+                <div class="container">
+                  <h4><b>ADD FERTILIZERS</b></h4>
+                  <p>Add new Fertilizer to the database</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <a href="/addnewmanufacturer">
+            <div class="small-box bg-green">
+              <div class="card">
+                <img src="assets/images/dashboard/undraw_Add_friends_wa2a.svg" alt="Avatar" style="width:100%; height:300px;">
+                <div class="container">
+                  <h4><b>ADD MANUFACTURERS</b></h4>
+                  <p>Add new manufaturers to the database</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <a href="/addnewuser">
+            <div class="small-box bg-yellow">
+              <div class="card">
+                <img src="assets/images/dashboard/undraw_miro_qvwm.svg" alt="Avatar" style="width:100%; height:300px;">
+                <div class="container">
+                  <h4><b>ADD ADMINS</b></h4>
+                  <p>Add new admins to the database</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <a href="/orders">
+          <div class="small-box bg-red">
+            <div class="card">
+              <img src="assets/images/dashboard/undraw_add_file_4gfw.svg" alt="Avatar" style="width:100%; height:300px;">
+              <div class="container">
+                <h4><b>VIEW ORDERS</b></h4>
+                <p>view all orders</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      SL1 Mini Project(group 5)
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2020 <a href="#">efertlizer store</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="assets/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="assets/Admin/dist/js/adminlte.min.js"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>

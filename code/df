@@ -1,0 +1,86 @@
+[33mcommit fe52ac67ea25a3d2abcf92601d53360b6585db12[m[33m ([m[1;36mHEAD -> [m[1;32mvaibhav[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: b0e94fa e01b40d
+Author: dev-shubham1 <shubhamghule2303@gmail.com>
+Date:   Wed Dec 2 23:45:45 2020 +0530
+
+    Merge branch 'master' of github.com:shubhamghule1/efertilizer-store into master
+
+[33mcommit b0e94fa69044f3ff56fe2eb5be5fbd130de2ecac[m
+Author: dev-shubham1 <shubhamghule2303@gmail.com>
+Date:   Wed Dec 2 23:45:33 2020 +0530
+
+    add fertilizer.sql
+
+[33mcommit e01b40d7b905bda1ad991575102c28c6a973033b[m
+Merge: 527d52b 2ea05e3
+Author: Vaibhavck <47863940+Vaibhavck@users.noreply.github.com>
+Date:   Wed Dec 2 23:43:07 2020 +0530
+
+    Merge pull request #2 from shubhamghule1/vaibhav
+    
+    add checkout page
+
+[33mcommit 2ea05e370a131e6e6ab1f386cfbbb4525da22e5f[m[33m ([m[1;31morigin/vaibhav[m[33m)[m
+Author: Vaibhavck <vaibhavkanade03@gmail.com>
+Date:   Wed Dec 2 23:41:08 2020 +0530
+
+    checkput page added
+
+[33mcommit 527d52b5bc4948719534d69af49ef1bad023ad9c[m
+Merge: e752fb3 d8d7aff
+Author: Shubham Ghule <42390885+shubhamghule@users.noreply.github.com>
+Date:   Wed Dec 2 19:51:18 2020 +0530
+
+    Merge pull request #1 from shubhamghule1/vaibhav
+    
+    Add new pages in user dashboard
+
+[33mcommit e752fb3251b436eb8adff353e9635f9a2f049b0a[m
+Author: Vaibhavck <47863940+Vaibhavck@users.noreply.github.com>
+Date:   Wed Dec 2 19:07:08 2020 +0530
+
+    Update README.md
+
+[33mcommit d8d7affcd0d6eff4558be6e1d655ccc386425387[m
+Author: Vaibhavck <vaibhavkanade03@gmail.com>
+Date:   Wed Dec 2 19:02:50 2020 +0530
+
+    added product details page
+
+[33mcommit 63c13ed4b24d5f02397aebde732b5ad6dd5c1e72[m
+Author: Vaibhavck <vaibhavkanade03@gmail.com>
+Date:   Mon Nov 30 17:26:40 2020 +0530
+
+    added purchase history page
+
+[33mcommit c0e190579214f424e3658f6805e6fe8d8eb6b2f6[m
+Author: Vaibhavck <vaibhavkanade03@gmail.com>
+Date:   Mon Nov 30 12:22:05 2020 +0530
+
+    Admin Dashboard page updated
+
+[33mcommit d57e5ad77abc3ac248836c4e87422b665dbea47e[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Vaibhavck <vaibhavkanade03@gmail.com>
+Date:   Mon Nov 30 01:26:05 2020 +0530
+
+    register and dashboard pages updated
+
+[33mcommit c58e4a6c41d336f15bb636a8c68fa989610c53ad[m[33m ([m[1;31morigin/sg[m[33m)[m
+Author: sr-garje99 <shvmgarje@gmail.com>
+Date:   Sun Nov 29 22:44:48 2020 +0530
+
+    product
+    
+    product page in  html css
+
+[33mcommit b5f5326a95fb24c6c432719569f597307a04d445[m
+Author: Vaibhavck <47863940+Vaibhavck@users.noreply.github.com>
+Date:   Sun Nov 29 22:27:18 2020 +0530
+
+    Update README.md
+
+[33mcommit d3545a10ec80c3249cf201a5ec8450e747f60b8a[m
+Author: Vaibhavck <vaibhavkanade03@gmail.com>
+Date:   Sun Nov 29 22:15:39 2020 +0530
+
+    project added

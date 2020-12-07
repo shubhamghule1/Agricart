@@ -1,0 +1,53 @@
+#container{
+	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+	height: 10%;
+	width: 75%;
+	
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  input:focus {
+    border: none;
+    outline: none;
+  }
+  
+  form {
+    /* text-align: center; */
+    margin: 10%;
+    margin-left: 0;
+  }
+  .quantity input {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    text-align:center;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-right: none;
+  }
+  
+  .quantity input:last-child {
+      border-right: 1px solid #ccc;
+  }
+  
+  input[type="button"] {
+    cursor: pointer
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="assets/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/Admin/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="assets/Admin/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/Admin/dist/css/AdminLTE.min.css">
+
+  <link rel="stylesheet" href="assets/Admin/dist/css/skins/skin-blue.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | e-Agriculture Store</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/dashboard-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/product-details-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+
+<% include ../partials/user-sidebar %>
+
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <!-- <header class="main-header">
+
+    
+    <a href="/" class="logo">
+      
+      <span class="logo-mini"><b>Med</b>Help</span>
+      
+      <span class="logo-lg"><b>Med</b>HELP</span>
+    </a>
+
+    
+    <nav class="navbar navbar-static-top" role="navigation">
+      
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              
+              <img src="assets/Admin/dist/img/avatar5.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">Name of the user</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header> -->
+
+
+  <header class="main-header">
+
+    
+    <a href="/userDashboard" class="logo">
+      
+      <span class="logo-mini"><b>E-Agriculture</b>Shop</span>
+      
+      <span class="logo-lg"><b>E-Agriculture</b>Shop</span>
+    </a>
+
+    
+    <nav class="navbar navbar-static-top" role="navigation">
+      
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    </nav>
+  </header>
+
+  <div class="navbar">
+    <nav>
+        <div class="nav-wrapper blue">
+            <img src="assets/Admin/dist/img/avatar5.png" class="user-image" alt="User Image" style="height: 80px;">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a>&nbsp;&nbsp;&nbsp; <%= username %></a></li>
+            <li><a class="btn" href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Sidebar-->
+<!-- <a href="/logout" class="btn btn-default btn-flat">Sign out</a> -->
+<!-- Sidebar -->
+
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- /.content -->
+    <div class="container-2">
+      <!-- <h2 class="title">Featured Products</h2> -->
+  
+      <div class="row row-2">
+          <h2><strong>Product Details</strong></h2>
+          <!-- <select name="" id="">
+              <option value="">sort by</option>
+              <option value="">Sort by price</option>
+              <option value="">Sort by rating</option>
+          </select> -->
+      </div>
+      
+
+        <div id="container" style="border: black solid 2px;">	
+	
+            <!-- Start	Product details -->
+                <div class="product-details">
+                    
+                    <!-- 	Product Name -->
+                <h1><%= productInfo.fert_name %></h1>
+            <!-- 		<span class="hint new">New</span> -->
+            <!-- 		<span class="hint free-shipping">Free Shipping</span> -->
+            <!-- 		the Product rating -->
+                <span class="hint-star star">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </span>
+                    
+                
+            <!-- The most important information about the product -->
+            <br>
+            <br>
+            <br>
+            <!-- <p ><%= productInfo.fert_desc %></p> -->
+            <ul style="font-size: larger;">
+                <li style="padding-top: 5px;"><strong> Category: </strong><%= productInfo.fert_category %></li>
+                <li style="padding-top: 5px;"><strong> Stock: </strong><%= productInfo.stock %></li>
+                <li style="padding-top: 5px;"><strong> Type: </strong><%= productInfo.fert_type %></li>
+                <li style="padding-top: 5px;"><strong> Date MFD: </strong><%= String(productInfo.fert_mfd).split(" ")[1] + " " + String(productInfo.fert_mfd).split(" ")[2] + " " + String(productInfo.fert_mfd).split(" ")[3]  %></li>
+                <li style="padding-top: 5px;"><strong> Date Expiry: </strong><%= String(productInfo.fert_expiry).split(" ")[1] + " " + String(productInfo.fert_expiry).split(" ")[2] + " " + String(productInfo.fert_expiry).split(" ")[3] %></li>
+            </ul>
+            <br>
+            <br>
+            
+                    
+                    
+            <!-- 		Control -->
+            <div class="control">
+                
+            <!-- Start Button buying -->
+                <button class="btn2">
+            <!-- 		the Price -->
+                 <span class="price">Rs.<span id="pricetoChange"> <%= productInfo.price_per_unit %></span></span>
+            <!-- 		Buy Now / ADD to Cart-->
+               <a href="../<%= uid %>/checkout/<%= productInfo.fert_id %>"><span class="buy">Buy Now</span></a>
+             </button>
+                
+            </div>
+                        
+            </div>
+                
+            <!-- 	End	Product details   -->
+                
+                
+                
+            <!-- 	Start product image & Information -->
+                
+            <div class="product-image">
+                
+                <img src="<%= productInfo.image %>" alt="<%= productInfo.fert_name %>">
+                
+            <!-- 	product Information-->
+            <div class="info">
+                <h2>The Description</h2>
+                <p style="color: white; margin-top: 25%; text-align: center;"><strong><%= productInfo.fert_desc %></strong></p>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      SL1 mini-project (Group ID : 5)
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2020 <a href="#" style="color: blue;">e-Fertilizer Store</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="assets/Admin/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="assets/Admin/dist/js/adminlte.min.js"></script>
+
+</main>
+</body>
+</html>

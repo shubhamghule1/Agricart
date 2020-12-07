@@ -1,0 +1,235 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+
+body {
+background: #DFC2F2;
+	background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+	background-attachment: fixed;	
+	background-size: cover;
+	}
+
+#container{
+	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+	height: 10%;
+	width: 75%;
+	
+}
+
+
+
+/* 	Product details  */
+.product-details {
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+	padding: 30px;
+	height: 100%;
+	float: left;
+	width: 40%;
+
+}
+
+/* 	Product Name */
+#container .product-details h1{
+	display: inline-block;
+	position: relative;
+	padding-top: 20px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #344055;
+	margin: 0;
+	
+}
+
+#container .product-details h1:before{
+	position: absolute;
+	content: '';
+	right: 0%; 
+	top: 0%;
+	transform: translate(25px, -15px);
+	/* font-family: 'Farsan', cursive; */
+	display: inline-block;
+	background: #FFA69E;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 5px;
+	color: #FFF;
+	margin: 0;
+	animation: chan-sh 6s ease infinite;
+
+}
+
+
+@keyframes chan-sh {
+	from  {content: 'free shipping';}
+	to  {content: 'New';}
+	
+}
+
+/*Product Rating  */
+.hint-star {
+	display: inline-block;
+	margin-left: 0.5em;
+	color: gold;
+	width: 50%;
+}
+
+
+/* The most important information about the product */
+#container .product-details > p {
+	/* font-family: 'Farsan', cursive; */
+	/* text-align: center; */
+	font-size: 20px;
+	color: black;
+	
+}
+
+/* control */
+
+.control{
+	bottom: 20%;
+	left: 22.8%;
+	
+}
+/* the Button */
+.btn2 {
+	/* transform: translateY(0px);   */
+	/* transition: 0.3s linear; */
+	background: #49C608;
+	border-radius: 5px;
+  /* position: relative; */
+  overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #eee;
+	padding: 0;
+    margin: auto;
+
+	
+}
+
+/* .btn2:hover{transform: translateY(-4px);} */
+
+.btn2 span {
+	/* font-family: 'Farsan', cursive; */
+	/* transition: transform 0.3s; */
+	display: inline-block;
+  padding: 10px 20px;
+	font-size: 1.2em;
+	margin:0;
+	
+}
+/* shopping cart icon */
+/* .btn2 .price, .shopping-cart{
+	background: #333;
+	border: 0;
+	margin: 0;
+} */
+
+/* .btn2 .price {
+	transform: translateX(-10%); padding-right: 15px;
+} */
+
+/* the Icon */
+/* .btn2 .shopping-cart {
+	transform: translateX(-100%);
+  position: absolute;
+	background: #333;
+	z-index: 1;
+  left: 0;
+  top: 0;
+} */
+
+/* buy */
+.btn2 .buy {z-index: 3; font-weight: bolder;}
+
+/* .btn2:hover .price {transform: translateX(-110%);}
+
+.btn2:hover .shopping-cart {transform: translateX(0%);} */
+
+
+
+/* product image  */
+.product-image {
+	transition: all 0.3s ease-out;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	float: right;
+	width: 50%;
+	display: inline-block;
+}
+
+#container img {width: 100%;height: 100%;}
+
+.info {
+    background: rgba(27, 26, 26, 0.9);
+    /* font-family: 'Farsan', cursive; */
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    line-height: 1.9;
+    text-align: left;
+    font-size: 120%;
+    cursor: no-drop;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.info h2 {text-align: center}
+.product-image:hover .info{transform: translateX(0);}
+
+.info ul li{transition: 0.3s ease; font-size: larger;}
+.info ul li:hover{transform: translateX(50px) scale(1.3);}
+
+.product-image:hover img {transition: all 0.3s ease-out;}
+.product-image:hover img {transform: scale(1.2, 1.2);}
+
+
+
+
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  input:focus {
+    border: none;
+    outline: none;
+  }
+  
+  form {
+    /* text-align: center; */
+    margin: 10%;
+    margin-left: 0;
+  }
+  .quantity input {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    text-align:center;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-right: none;
+  }
+  
+  .quantity input:last-child {
+      border-right: 1px solid #ccc;
+  }
+  
+  input[type="button"] {
+    cursor: pointer
+  }

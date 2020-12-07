@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Fertilizers</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/dashboard-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<% include ../partials/header %>
+<% include ../partials/user-sidebar %>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Welcome!</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">All Medicines</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <tr>
+                  <th>ID</th>
+                  <th>Fert Name</th>
+                  <th>Category</th>
+                  <th>Type</th>
+                  <th>MFD</th>
+                  <th>Expiry</th>
+                  <th>Stock</th>
+                  <th>Fert Price</th>
+                  <th>Availability</th>
+                </tr>
+                    <% for(var i=0; i < List.length; i++){ %>
+                      <tr>
+                          <td><%= List[i].fert_id %></td>
+                        <td><%= List[i].fert_name %></td>
+                        <td><%= List[i].fert_category %></td>
+                        <td><%= List[i].fert_type %></td>
+                        <td><%= String(List[i].fert_mfd).split(" ")[1] + " " + String(List[i].fert_mfd).split(" ")[2] + " " + String(List[i].fert_mfd).split(" ")[3] %></td> 
+                        <td><%= String(List[i].fert_expiry).split(" ")[1] + " " + String(List[i].fert_expiry).split(" ")[2] + " " + String(List[i].fert_expiry).split(" ")[3] %></td> 
+                        <td><%= List[i].stock %></td>
+                        <td><%= List[i].price_per_unit %></td>
+                        <% if(List[i].availability){ %>
+                          <td>YES</td>
+                        <%}else{%>
+                          <td>NO</td>
+                        <%}%>
+                      </tr>
+                      <% } %>
+
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

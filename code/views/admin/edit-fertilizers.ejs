@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Edit Medicine</title>
+
+  <% include ../partials/header %>
+  <% include ../partials/admin-sidebar %>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Welcome!</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Update Fertilizer</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form method="post">
+            <div class="box-body">
+              <div class="form-group">
+                <label>Fertilizer Name</label>
+                <input type="text" class="form-control" id="hotel-title" placeholder="Fertilizer name" name="fert_name" value="<%= result.fert_name %>" required >
+              </div>
+              <div class="form-group">
+                <label>Fertilizer Price</label>
+                <input type="text" class="form-control" id="hotel-location" placeholder="price" name="price" value="<%= result.price_per_unit %>" required>
+              </div>
+              <div class="form-group">
+                <label>Fertilizer Stock</label>
+                <input type="text" class="form-control" id="hotel-location" placeholder="stock" name="stock" value="<%= result.stock %>" required>
+              </div>
+
+              <div class="form-group">
+                <label>Manufacturer Id</label>
+                <input type="text" class="form-control" id="hotel-location" placeholder="manufacturer id" name="man_id" value="<%= result.man_id %>" required>
+              </div>
+
+              <div class="form-group" style="display: flex;flex-flow: row; justify-content: space-around;align-items: flex-start;">
+                <label for="manufacturingdate">Date MFD:(<%=String(result.fert_mfd).split(" ")[2]+"/"+ String( result.fert_mfd ).split(" ")[1]+"/"+String(result.fert_mfd).split(" ")[3]%>)
+                <input type="date" name="date_mfg" id="dateofbirth" value="<%= result.fert_mfd %>">
+                </label>
+                  <label for="Expirydate">Date Expiry:(<%=String(result.fert_expiry).split(" ")[2]+"/"+ String( result.fert_expiry ).split(" ")[1]+"/"+String(result.fert_expiry).split(" ")[3]%>)
+                  <input type="date" name="date_expiry" id="dateofbirth" value="<%= result.fert_expiry %>">
+                </label>
+              </div>
+
+
+              <div class="form-group">
+                <label>Fertilizer Description</label>
+                <textarea class="form-control" rows="3" id="hotel-desc" placeholder="Fertilizer Description" name="med_desc" value="<%= result.fert_desc %>" required><%= result.fert_desc %></textarea>
+              </div>  
+              <div class="form-group">
+                <label>Fertilizer Category</label>
+                <select class="form-control" name="category" value="<%= result.fert_catergory %>" required>
+                  <option value="">-SELECT-</option>
+                  <% if(result.fert_catergory =='Organic'){ %>
+                    <option value="Organic" selected>Organic</option>
+                    <option value="Inorganic">Inorganic</option>
+                    <option value="Pesticide">Pesticide</option>
+                  <% }else if (result.fert_catergory =='Inorganic') {%>
+                    <option value="Organic">Organic</option>
+                    <option value="Inorganic" selected>Inorganic</option>
+                    <option value="Pesticide">Pesticide</option>
+                  <% }else {%> 
+                    <option value="Organic">Organic</option>
+                    <option value="Inorganic">Inorganic</option>
+                    <option value="Pesticide" selected>Pesticide</option>
+                  <%}%>
+                    
+                </select>
+              </div>
+
+            <!-- <div class="form-group">
+                <label>Vendor Name</label>
+                <textarea class="form-control" rows="3" id="hotel-desc" placeholder="Vendor Name" name="vendor" required></textarea>
+            </div>   -->
+            <div class="form-group">
+              <label>Fertilizer Type</label>
+              <select class="form-control" name="fert_type" value="<%= result.fert_type %>" required>
+                  <option value="">-SELECT-</option>
+                  <% if(result.fert_type == 'Solid') {%>
+                    <option value="Solid" selected>Solid</option>
+                    <option value="Liquid">Liquid</option>
+                  <% }else{ %> 
+                    <option value="Solid" >Solid</option>
+                    <option value="Liquid" selected>Liquid</option>
+                    <% } %> 
+                  
+              </select>
+            </div>
+            <div class="box-footer">
+              <% if(message != ""){ %>
+                <div class="error">
+                  <p><span id="error"><div class="alert alert-error"><%= message %></div></span></p>
+                </div>
+              <% } %>    
+              <button type="submit" class="btn btn-primary">UPDATE</button>
+            </div>
+          </form>
+        </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
