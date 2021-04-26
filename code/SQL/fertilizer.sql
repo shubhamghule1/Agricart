@@ -170,7 +170,7 @@ UNLOCK TABLES;
 /*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
+DELIMITER ;; 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `reduce_stock`(IN f_id INT,IN qty INT)
 BEGIN DECLARE quant INT DEFAULT qty; SET quant =(SELECT stock FROM fertilizers WHERE fert_id=f_id) - quant; if quant>0 then UPDATE fertilizers SET stock=quant WHERE fert_id=f_id; else UPDATE fertilizers SET stock=quant, availability=0 WHERE fert_id=f_id; end if; end ;;
 DELIMITER ;
